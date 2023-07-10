@@ -1,6 +1,8 @@
 //! key --> 20330c4b-4bdf-4a7f-88f8-8b591bbf4d4f
 
 import React, { useEffect, useState } from "react";
+import "./Crypto.css";
+
 import axios from "axios";
 
 function Crypto() {
@@ -36,32 +38,25 @@ function Crypto() {
 
   return (
     <div>
-      <h1>Top 100 Cryptocurrency Coins</h1>
-      <table style={{ borderCollapse: "collapse", textAlign: "center" }}>
+      <table className="crypto_table">
         <thead>
           <tr>
-            <th style={{ border: "1px solid black", padding: "8px" }}>
-              Symbol
-            </th>
-            <th style={{ border: "1px solid black" }}>Name</th>
-            <th style={{ border: "1px solid black" }}>Market Cap USD</th>
-            <th style={{ border: "1px solid black" }}>Price USD</th>
-            <th style={{ border: "1px solid black" }}>Change %</th>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Market Cap USD</th>
+            <th>Price USD</th>
+            <th>Change %</th>
           </tr>
         </thead>
         <tbody>
           {crypto.map((coin) => {
             return (
               <tr key={coin.id}>
-                <td style={{ border: "1px solid black" }}>{coin.symbol}</td>
-                <td style={{ border: "1px solid black" }}>{coin.name}</td>
-                <td style={{ border: "1px solid black" }}>
-                  {coin.marketCapUsd}
-                </td>
-                <td style={{ border: "1px solid black" }}>{coin.priceUsd}</td>
-                <td style={{ border: "1px solid black" }}>
-                  {coin.changePercent24Hr}
-                </td>
+                <td>{coin.symbol}</td>
+                <td>{coin.name}</td>
+                <td>{coin.marketCapUsd}</td>
+                <td>{coin.priceUsd}</td>
+                <td>{coin.changePercent24Hr}</td>
               </tr>
             );
           })}

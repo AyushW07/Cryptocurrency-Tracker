@@ -1,0 +1,28 @@
+.crypto_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.crypto_table th,
+.crypto_table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.crypto_table th {
+  background-color: aqua;
+  font-weight: bold;
+}
+
+.crypto_table tbody tr:nth-child(even) {
+  background-color: blanchedalmond;
+}
+
+.crypto_table tbody tr:hover {
+  background-color: aquamarine;
+}
+
+.crypto_table td:last-child {
+  text-align: right;
+}
